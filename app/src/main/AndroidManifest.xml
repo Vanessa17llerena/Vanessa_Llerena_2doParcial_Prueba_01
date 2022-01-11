@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.aperez.apps.androidfunwithflags.VELLC_MainActivity"
+            android:name=".VELLC_LOGIN"
+            android:exported="false" />
+        <activity
+            android:name=".VELLC_MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
@@ -21,9 +24,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.aperez.apps.androidfunwithflags.VELLC_SettingsActivity"
+            android:name=".VELLC_SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="com.aperez.apps.androidfunwithflags.VELLC_MainActivity"
+            android:parentActivityName=".VELLC_MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
