@@ -1,4 +1,4 @@
-package com.omilec.apps.androidfunwithflags;
+package com.aperez.apps.androidfunwithflags;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

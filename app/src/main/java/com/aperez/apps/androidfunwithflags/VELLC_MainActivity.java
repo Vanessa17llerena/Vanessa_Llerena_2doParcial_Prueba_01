@@ -1,4 +1,4 @@
-package com.omilec.apps.androidfunwithflags;
+package com.aperez.apps.androidfunwithflags;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -12,23 +12,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.omilec.apps.eventhandlers.PreferenceChangeListener;
-import com.omilec.apps.lifecyclehelpers.QuizViewModel;
+import com.aperez.apps.eventhandlers.PreferenceChangeListener;
+import com.aperez.apps.lifecyclehelpers.QuizViewModel;
 
-public class MainActivity extends AppCompatActivity {
+public class VELLC_MainActivity extends AppCompatActivity {
     public static final String CHOICES = "pref_numberOfChoices";
     public static final String REGIONS = "pref_regionsToInclude";
     private boolean deviceIsPhone = true;
     private boolean preferencesChanged = true;
-    private MainActivityFragment quizFragment;
+    private VELLC_MainActivityFragment quizFragment;
     private QuizViewModel quizViewModel;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
 
     private void setSharedPreferences() {
-        // set default values in the app's SharedPreferences
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
-        // Register a listener for shared preferences changes
+
         PreferenceManager.getDefaultSharedPreferences(this)
                 .registerOnSharedPreferenceChangeListener(preferencesChangeListener);
     }
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (preferencesChanged) {
-            this.quizFragment = (MainActivityFragment) getSupportFragmentManager()
+            this.quizFragment = (VELLC_MainActivityFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.quizFragment);
             this.quizViewModel.setGuessRows(PreferenceManager.getDefaultSharedPreferences(this)
                     .getString(CHOICES, null));
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent preferencesIntent = new Intent(this, SettingsActivity.class);
+        Intent preferencesIntent = new Intent(this, VELLC_SettingsActivity.class);
         startActivity(preferencesIntent);
         return super.onOptionsItemSelected(item);
     }
@@ -96,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 Configuration.SCREENLAYOUT_SIZE_MASK;
     }
 
-    public MainActivityFragment getQuizFragment() {
+    public VELLC_MainActivityFragment getQuizFragment() {
         return this.quizFragment;
     }
 

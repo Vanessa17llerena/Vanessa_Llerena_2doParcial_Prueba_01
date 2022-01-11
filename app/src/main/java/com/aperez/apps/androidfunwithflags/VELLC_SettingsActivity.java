@@ -1,10 +1,10 @@
-package com.omilec.apps.androidfunwithflags;
+package com.aperez.apps.androidfunwithflags;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-public class SettingsActivity extends AppCompatActivity{
+public class VELLC_SettingsActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
